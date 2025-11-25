@@ -1,0 +1,485 @@
+/*
+=================================
+PORTFOLIO CSS - STYLE PRINCIPAL
+=================================
+Palette de couleurs: #d700f8 (Primaire), #0e0e0e (Background), #1e1e1e/#2a2a2a (Cards)
+*/
+
+/* Reset CSS pour une base propre */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuration du body principal */
+body {
+    font-family: 'Poppins', sans-serif;  
+    color: #fff;                         /* Texte blanc par défaut */
+    background: #0e0e0e;                 /* Fond noir foncé */
+    scroll-behavior: smooth;             /* Défilement fluide entre sections */
+}
+
+/* Header fixe avec effet de transparence */
+header {
+    position: fixed;                     /* Reste en haut lors du scroll */
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);         /* Fond semi-transparent */
+    backdrop-filter: blur(8px);          /* Effet de flou moderne */
+    z-index: 10;                         /* Au-dessus du contenu */
+}
+
+/* Navigation horizontale centrée */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;                    /* Supprime les puces */
+    padding: 1rem;
+}
+
+/* Liens de navigation */
+nav a {
+    color: #fff;
+    text-decoration: none;               /* Supprime le soulignement */
+    margin: 0 1rem;
+    transition: color 0.3s;              /* Animation fluide au hover */
+}
+
+/* Effet hover sur les liens */
+nav a:hover {
+    color: #d700f8;                      /* Change vers la couleur primaire */
+}
+
+/* Configuration des sections principales */
+.section {
+    min-height: 100vh;                   /* Hauteur minimum = écran complet */
+    padding: 8rem 8rem 4rem;             /* Marges latérales plus importantes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;                   /* Largeur maximale pour centrer */
+    margin: 0 auto;                      /* Centrage horizontal */
+}
+
+/* Titres h1 plus grands */
+.section h1 {
+    font-size: 3.5rem;                   /* Taille très importante pour h1 */
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Titres h2 plus grands */
+.section h2 {
+    font-size: 2.8rem;                   /* Taille importante pour h2 */
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Paragraphes plus grands */
+.section p {
+    font-size: 1.4rem;                   /* Taille augmentée pour les paragraphes */
+    line-height: 1.8;                    /* Interlignage plus généreux */
+    margin-bottom: 1.5rem;
+    text-align: justify;                 /* Justification du texte */
+    max-width: 100%;                     /* Utilise toute la largeur disponible */
+}
+
+/* Classe utilitaire pour texte en surbrillance */
+.highlight {
+    color: #d700f8;                      /* Couleur primaire du thème */
+}
+
+/* Styles pour la section parcours */
+.parcours-item {
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 12px;
+    border-left: 4px solid #d700f8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.parcours-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(215, 0, 248, 0.2);
+}
+
+.parcours-item h3 {
+    font-size: 1.8rem;
+    color: #d700f8;
+    margin-bottom: 0.5rem;
+}
+
+.parcours-item h4 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.parcours-item p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+/* Conteneur des compétences en flexbox */
+.skills {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;                     /* Passage à la ligne si nécessaire */
+    justify-content: center;
+}
+
+/* Style individuel des badges de compétences */
+.skills li {
+    background: #1c1c1c;                /* Fond gris foncé */
+    padding: 1rem 1.5rem;               /* Padding plus généreux */
+    border-radius: 8px;                  /* Coins arrondis */
+    font-size: 1.2rem;                   /* Taille de texte plus grande */
+    position: relative;                  /* Pour le positionnement du tooltip */
+    transition: all 0.3s ease;          /* Animation fluide */
+    cursor: pointer;                     /* Indique l'interactivité */
+}
+
+/* Effet hover sur les badges */
+.skills li:hover {
+    background: #d700f8;                /* Fond violet au survol */
+    transform: translateY(-3px);        /* Légère élévation */
+    box-shadow: 0 5px 15px rgba(215, 0, 248, 0.3);  /* Ombre colorée */
+}
+
+/* Tooltip caché par défaut */
+.skills li::before {
+    content: attr(data-tooltip);        /* Contenu du tooltip depuis l'attribut data */
+    position: absolute;
+    bottom: 120%;                        /* Positionné au-dessus */
+    left: 50%;
+    transform: translateX(-50%);         /* Centré horizontalement */
+    background: rgba(0, 0, 0, 0.9);      /* Fond noir semi-transparent */
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    white-space: nowrap;                 /* Empêche le retour à la ligne */
+    opacity: 0;                          /* Invisible par défaut */
+    pointer-events: none;                /* N'interfère pas avec la souris */
+    transition: opacity 0.3s ease;
+    z-index: 1000;                       /* Au-dessus de tout */
+    max-width: 250px;                    /* Largeur maximale */
+    white-space: normal;                 /* Permet le retour à la ligne si nécessaire */
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Petite flèche pointant vers l'élément */
+.skills li::after {
+    content: '';
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+/* Affichage du tooltip au hover */
+.skills li:hover::before,
+.skills li:hover::after {
+    opacity: 1;                          /* Visible au survol */
+}
+
+/* Section projets avec positionnement relatif */
+#projets {
+    position: relative;                  /* Pour les éléments positionnés absolument */
+    padding: 8rem 2rem 4rem;             /* Padding spécifique pour la section projets */
+}
+
+/* Titre de la section projets */
+#projets h2 {
+    font-size: 2.8rem;                   /* Même taille que les autres h2 */
+    margin-bottom: 3rem;                 /* Plus d'espace avant le carrousel */
+    text-align: center;
+}
+
+/* Conteneur principal du carrousel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;                    /* Cache les projets hors de vue */
+    width: 100%;
+    max-width: 1200px;                   /* Largeur maximale */
+    margin: 0 auto;                      /* Centrage horizontal */
+}
+
+/* Conteneur des slides du carrousel */
+.carousel {
+    display: flex;                       /* Disposition horizontale des projets */
+    gap: 0;                             /* Pas d'espace entre les projets */
+    padding: 2rem 0;
+    transition: transform 0.3s ease;     /* Animation GSAP override */
+    justify-content: center;             /* Centrage du contenu */
+    width: calc(1200px * 9);            /* Largeur totale pour 9 projets */
+}
+
+/* Style principal des cartes de projet */
+.project {
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);  /* Dégradé élégant */
+    width: 1200px;                       /* Largeur fixe pour le carrousel */
+    min-height: 500px;                   /* Hauteur minimum */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;                 /* Coins très arrondis */
+    flex-shrink: 0;                      /* Empêche la compression */
+    cursor: pointer;                     /* Indique l'interactivité */
+    transition: all 0.3s ease;          /* Animations fluides */
+    border: 2px solid transparent;       /* Bordure invisible par défaut */
+    padding: 3rem;                       /* Espacement interne généreux */
+    margin: 0 auto;                      /* Centrage de chaque projet */
+}
+
+/* Effet hover sur les cartes de projet */
+.project:hover {
+    border-color: #d700f8;               /* Bordure colorée au survol */
+    box-shadow: 0 8px 32px rgba(215, 0, 248, 0.3);  /* Ombre colorée */
+}
+
+/* Layout principal du contenu (image + infos) */
+.project-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;      /* Deux colonnes égales */
+    gap: 2rem;                           /* Espacement entre colonnes */
+    width: 100%;
+    height: 100%;
+    align-items: center;                 /* Centrage vertical */
+}
+
+/* Zone d'affichage des médias (images/vidéos) */
+.project-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;                    /* Fond de contraste */
+    border-radius: 12px;
+    overflow: hidden;                    /* Coins arrondis pour l'image */
+    aspect-ratio: 4/3;                   /* Ratio d'image cohérent */
+}
+
+/* Images dans la zone média */
+.project-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                   /* Remplit la zone sans déformation */
+    border-radius: 12px;
+}
+
+/* Conteneur des informations textuelles */
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;                         /* Espacement vertical */
+    height: 100%;
+}
+
+/* Zone de description principale */
+.project-description {
+    flex: 1;                             /* Prend l'espace disponible */
+}
+
+/* Titre des projets */
+.project-description h3 {
+    font-size: 2.2rem;                   /* Taille imposante */
+    color: #d700f8;                      /* Couleur primaire */
+    margin-bottom: 1rem;
+}
+
+/* Description textuelle des projets */
+.project-description p {
+    font-size: 1.2rem;
+    line-height: 1.6;                    /* Interlignage confortable */
+    color: #e0e0e0;                      /* Gris clair pour la lisibilité */
+}
+
+/* Conteneur des logos de technologies */
+.project-technologies {
+    display: flex;
+    gap: 1.5rem;                         /* Espacement entre logos */
+    flex-wrap: wrap;                     /* Passage à la ligne si nécessaire */
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);      /* Fond semi-transparent */
+    border-radius: 8px;
+    border: 1px solid rgba(215, 0, 248, 0.2);  /* Bordure subtile colorée */
+}
+
+/* Style des logos de technologies */
+.tech-logo {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;     /* Animation au hover */
+}
+
+/* Effet hover sur les logos */
+.tech-logo:hover {
+    transform: scale(1.2);               /* Agrandissement au survol */
+}
+
+/* Conteneur des boutons de navigation */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Style des boutons Précédent/Suivant */
+.nav-btn {
+    background: rgba(215, 0, 248, 0.2);  /* Fond semi-transparent coloré */
+    border: 2px solid #d700f8;           /* Bordure colorée */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;                 /* Boutons très arrondis */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+/* Effet hover sur les boutons */
+.nav-btn:hover {
+    background: #d700f8;                 /* Fond plein au survol */
+    transform: scale(1.05);              /* Léger agrandissement */
+}
+
+/* Conteneur des points indicateurs */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Style des points indicateurs */
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;                  /* Forme circulaire */
+    background: rgba(255, 255, 255, 0.3); /* Fond semi-transparent */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Point actif (projet en cours) */
+.indicator.active {
+    background: #d700f8;                 /* Couleur primaire pour l'actif */
+    transform: scale(1.2);               /* Légèrement plus grand */
+}
+
+/* Adaptation pour tablettes et mobiles */
+@media (max-width: 768px) {
+    /* Sections adaptatives sur mobile */
+    .section {
+        padding: 6rem 2rem 4rem;         /* Marges réduites sur mobile */
+    }
+    
+    /* Section projets spécifique sur mobile */
+    #projets {
+        padding: 6rem 1rem 4rem;         /* Padding encore plus réduit pour les projets */
+    }
+    
+    /* Titres adaptatifs */
+    .section h1 {
+        font-size: 2.5rem;               /* Titre h1 plus petit sur mobile */
+    }
+    
+    .section h2 {
+        font-size: 2rem;                 /* Titre h2 plus petit sur mobile */
+    }
+    
+    .section p {
+        font-size: 1.1rem;               /* Paragraphes plus petits sur mobile */
+        line-height: 1.6;
+    }
+    
+    /* Badges de compétences plus petits */
+    .skills li {
+        padding: 0.7rem 1rem;
+        font-size: 1rem;
+    }
+    
+    /* Tooltips adaptatifs sur mobile */
+    .skills li::before {
+        font-size: 0.8rem;
+        padding: 0.6rem 0.8rem;
+        max-width: 200px;
+        bottom: 130%;                    /* Plus d'espace au-dessus sur mobile */
+    }
+    
+    /* Pas d'effet hover sur mobile, affichage au tap */
+    @media (hover: none) {
+        .skills li:active::before,
+        .skills li:active::after {
+            opacity: 1;
+        }
+    }
+    
+    /* Cartes parcours adaptatives */
+    .parcours-item {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .parcours-item h3 {
+        font-size: 1.5rem;
+    }
+    
+    .parcours-item h4 {
+        font-size: 1.1rem;
+    }
+    
+    .parcours-item p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    /* Carrousel adaptatif */
+    .carousel-container {
+        max-width: 100%;                 /* Pleine largeur sur mobile */
+        padding: 0 1rem;                 /* Marges latérales */
+    }
+    
+    /* Projets adaptatifs */
+    .project {
+        width: 100%;                     /* S'adapte à l'écran */
+        min-height: auto;                /* Hauteur automatique */
+        padding: 1.5rem;                 /* Padding réduit */
+        margin: 0;                       /* Supprime le margin auto sur mobile */
+    }
+    
+    /* Layout vertical sur mobile */
+    .project-content {
+        grid-template-columns: 1fr;      /* Une seule colonne */
+        gap: 1.5rem;                     /* Espacement réduit */
+    }
+    
+    /* Typographie adaptée */
+    .project-description h3 {
+        font-size: 1.5rem;               /* Titre plus petit */
+    }
+    
+    .project-description p {
+        font-size: 1rem;                 /* Texte plus petit */
+    }
+    
+    /* Logos réduits sur mobile */
+    .tech-logo {
+        width: 35px;
+        height: 35px;
+    }
+}

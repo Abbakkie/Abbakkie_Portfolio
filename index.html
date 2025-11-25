@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - MAURICE Simon</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#presentation">Présentation</a></li>
+            <li><a href="#parcours">Parcours</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#projets">Projets</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="presentation" class="section">
+        <h1>Enchanté, je suis <span class="highlight">Simon MAURICE</span></h1>
+        <p>Depuis petit j'adore le domaine de l'informatique que cela passe des jeux-vidéos aux sites web qui ont forgé mon apprentissage, j'ai toujours baigner dans les technologies et nouveautés numériques. Vous pourrez retrouver une trace des projets de développement auquel j'ai participé, que se soit des projets personnels ou bien des projets effectués lors de mon parcours académique.</p>
+    </section>
+
+    <section id="parcours" class="section">
+        <h2>Mon parcours</h2>
+        
+        <div class="parcours-item">
+            <h3>Lycée Georges Baumont</h3>
+            <h4>Baccalauréat mention bien (Spécialités Mathématiques et NSI)</h4>
+            <p>J'ai commencé le développement au lycée avec le choix de la spécialité NSI (Numérique et Science de l'Informatique). J'ai directement accroché à la liberté et aux notions que j'apprenais lors des différents travaux pratiques.</p>
+            <p>J'ai par la suite décidé de continuer cette spécialité jusqu'en terminale. Tout au long de ces 3 années, j'ai principalement appris le langage Python et le développement orienté objet.</p>
+        </div>
+
+        <div class="parcours-item">
+            <h3>IUT Saint-Dié-des-Vosges</h3>
+            <h4>Formation BUT Informatique (en cours - 3ème année)</h4>
+            <p>Actuellement en troisième année de BUT informatique, j'ai développé mes compétences de développement mais pas seulement. J'ai aussi travaillé mes compétences de gestion d'équipe et de projet, ainsi que ma pratique régulière de l'anglais comme langue secondaire.</p>
+        </div>
+    </section>
+
+    <section id="competences" class="section">
+        <h2>Mes compétences</h2>
+        <ul class="skills">
+            <li data-tooltip="Langage de balisage pour structurer le contenu web">HTML</li>
+            <li data-tooltip="Feuilles de style pour la mise en forme et le design web">CSS / SASS</li>
+            <li data-tooltip="Langage de programmation pour l'interactivité web côté client">JavaScript</li>
+            <li data-tooltip="Langage de requête pour la gestion des bases de données">SQL</li>
+            <li data-tooltip="Langage de script côté serveur pour le développement web dynamique">PHP</li>
+            <li data-tooltip="Langage orienté objet robuste pour applications desktop et web">Java</li>
+            <li data-tooltip="Langage polyvalent idéal pour l'IA, data science et développement rapide">Python</li>
+            <li data-tooltip="Système de contrôle de version pour la collaboration en équipe">Git / GitHub</li>
+            <li data-tooltip="Langue internationale essentielle dans le domaine tech (Niveau B2)">Anglais</li>
+            <li data-tooltip="Seconde langue étrangère pour élargir les horizons (Niveau A2)">Espagnol</li>
+            <li data-tooltip="Maîtrise parfaite pour la communication et la rédaction">Français (Langue maternelle)</li>
+        </ul>
+    </section>
+
+    <section id="projets" class="section">
+        <h2>Mes projets</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="project">
+                    <div class="project-content">
+                        <div class="project-media">
+                            <img src="https://via.placeholder.com/400x300/2a2a2a/ffffff?text=Projet+1" alt="Projet 1">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-description">
+                                <h3>Création d'un site vitrine factif pour la marque Ricard</h3>
+                                <p>Application web complète de e-commerce avec panier, système de paiement et gestion des commandes. Interface moderne et responsive développée avec les dernières technologies web.</p>
+                            </div>
+                            <div class="project-technologies">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-content">
+                        <div class="project-media">
+                            <img src="https://via.placeholder.com/400x300/2a2a2a/ffffff?text=Projet+2" alt="Projet 2">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-description">
+                                <h3>Programme ludique pour apprendre une langue</h3>
+                                <p>Application mobile native pour la gestion de tâches avec synchronisation cloud et notifications push. Interface intuitive et performance optimisée.</p>
+                            </div>
+                            <div class="project-technologies">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-content">
+                        <div class="project-media">
+                            <img src="https://via.placeholder.com/400x300/2a2a2a/ffffff?text=Projet+3" alt="Projet 3">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-description">
+                                <h3>App web et Java pour la gesiton d'une association fictif d'E-Sport</h3>
+                                <p>Tableau de bord interactif pour l'analyse de données avec graphiques en temps réel et export de rapports. Développé avec des frameworks modernes.</p>
+                            </div>
+                            <div class="project-technologies">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-content">
+                        <div class="project-media">
+                            <img src="https://via.placeholder.com/400x300/2a2a2a/ffffff?text=Projet+4" alt="Projet 4">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-description">
+                                <h3>Utilisation d'API</h3>
+                                <p>API REST robuste pour une application de réservation avec authentification JWT, documentation Swagger et tests automatisés.</p>
+                            </div>
+                            <div class="project-technologies">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-content">
+                        <div class="project-media">
+                            <img src="1014.gif" alt="Démonstration du jeu Pygame">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-description">
+                                <h3>Jeu Pygame : participation à la nuit du code</h3>
+                                <p>Jeu développé en Python avec Pygame lors de la nuit du code. Gameplay interactif avec système de score, animations fluides et gestion des collisions. Projet réalisé en équipe dans un temps limité.</p>
+                            </div>
+                            <div class="project-technologies">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Pygame_logo.svg" alt="Pygame" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-content">
+                        <div class="project-media">
+                            <img src="dogwithhat.gif" alt="Projet 5">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-description">
+                                <h3>Application affichage d'image aléatoire </h3>
+                                <p>Site vitrine moderne pour une entreprise avec animations GSAP, optimisation SEO et design responsive. Performance et accessibilité optimisées.</p>
+                            </div>
+                            <div class="project-technologies">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="SASS" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-content">
+                        <div class="project-media">
+                            <img src="laby.gif" alt="Projet 5">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-description">
+                                <h3>Decouvert Python et Pygame</h3>
+                                <p>Jeu classique de labyrinthe en 2D</p>
+                            </div>
+                            <div class="project-technologies">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="SASS" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-content">
+                        <div class="project-media">
+                            <img src="figma.gif" alt="Projet 5">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-description">
+                                <h3>Réalisation d'une maquette FIGMA</h3>
+                                <p>Dans le cadre d'une projet d'utilisation d'API, bous devions réaliser la maquette FIGMA d'une application qui consistait à donner une image quelconque à un IA simple pour qu'elle renvoie sa déscision de si c'est obélix ou astérix ou aucun des deux sur l'image</p>
+                            </div>
+                            <div class="project-technologies">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="SASS" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-content">
+                        <div class="project-media">
+                            <img src="webgl.gif" alt="Projet 5">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-description">
+                                <h3>Introduction à WebGL</h3>
+                                <p>Création d'une scène 3D interactive avec WebGL</p>
+                            </div>
+                            <div class="project-technologies">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="SASS" class="tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <button class="nav-btn" id="prevBtn">← Précédent</button>
+            <button class="nav-btn" id="nextBtn">Suivant →</button>
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator active" data-index="0"></span>
+            <span class="indicator" data-index="1"></span>
+            <span class="indicator" data-index="2"></span>
+            <span class="indicator" data-index="3"></span>
+            <span class="indicator" data-index="4"></span>
+            <span class="indicator" data-index="5"></span>
+            <span class="indicator" data-index="6"></span>
+            <span class="indicator" data-index="7"></span>
+            <span class="indicator" data-index="8"></span>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Ton Nom</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
