@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         prevBtn.addEventListener('click', () => {
             clearInterval(autoplayTimer);
             prevProject();
-            autoplayTimer = setInterval(nextProject, 4000);
+            autoplayTimer = setInterval(nextProject, 8000);
         });
     }
     
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         nextBtn.addEventListener('click', () => {
             clearInterval(autoplayTimer);
             nextProject();
-            autoplayTimer = setInterval(nextProject, 4000);
+            autoplayTimer = setInterval(nextProject, 8000);
         });
     }
     
@@ -95,12 +95,12 @@ document.addEventListener('DOMContentLoaded', function() {
         indicator.addEventListener('click', () => {
             clearInterval(autoplayTimer);
             goToProject(index);
-            autoplayTimer = setInterval(nextProject, 4000);
+            autoplayTimer = setInterval(nextProject, 8000);
         });
     });
     
     // Défilement automatique
-    let autoplayTimer = setInterval(nextProject, 4000);
+    let autoplayTimer = setInterval(nextProject, 8000);
     
     // Pause du défilement automatique au survol
     carousel.addEventListener('mouseenter', () => {
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Reprise du défilement automatique
     carousel.addEventListener('mouseleave', () => {
-        autoplayTimer = setInterval(nextProject, 4000);
+        autoplayTimer = setInterval(nextProject, 8000);
     });
     
     // Navigation tactile/clavier
@@ -117,11 +117,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'ArrowLeft') {
             clearInterval(autoplayTimer);
             prevProject();
-            autoplayTimer = setInterval(nextProject, 4000);
+            autoplayTimer = setInterval(nextProject, 8000);
         } else if (e.key === 'ArrowRight') {
             clearInterval(autoplayTimer);
             nextProject();
-            autoplayTimer = setInterval(nextProject, 4000);
+            autoplayTimer = setInterval(nextProject, 8000);
         }
     });
     
@@ -155,6 +155,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         isDragging = false;
-        autoplayTimer = setInterval(nextProject, 4000);
+        autoplayTimer = setInterval(nextProject, 8000);
     });
 });

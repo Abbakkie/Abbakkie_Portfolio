@@ -131,9 +131,10 @@ nav a:hover {
 /* Conteneur des compétences en flexbox */
 .skills {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;                           /* Augmenté de 1rem à 2rem pour plus d'espacement */
     flex-wrap: wrap;                     /* Passage à la ligne si nécessaire */
     justify-content: center;
+    list-style: none;                    /* Supprime les puces de liste */
 }
 
 /* Style individuel des badges de compétences */
@@ -161,7 +162,7 @@ nav a:hover {
     bottom: 120%;                        /* Positionné au-dessus */
     left: 50%;
     transform: translateX(-50%);         /* Centré horizontalement */
-    background: rgba(0, 0, 0, 0.9);      /* Fond noir semi-transparent */
+    background: rgba(66, 3, 53, 0.9);      /* Fond noir semi-transparent */
     color: #fff;
     padding: 0.8rem 1rem;
     border-radius: 6px;
